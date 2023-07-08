@@ -15,7 +15,8 @@ const ChatRoom = () => {
     const [ socket, setSocket ] = useState()
 
     useEffect(() => {
-        const socket = io("http://localhost:8001/");
+        // const socket = io("http://localhost:8001/");
+         const socket = io('http://localhost:8001/',{transports: ['websocket']});
         setSocket(socket)
         socket.on("connect", () => {
             console.log(socket.id)
