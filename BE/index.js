@@ -10,7 +10,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://real-time-chat-app-ct3h.vercel.app/",
+    origin: "*",
     methods: ["GET", "POST"]
   }
 });
